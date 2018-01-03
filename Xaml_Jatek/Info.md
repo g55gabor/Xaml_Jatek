@@ -29,4 +29,10 @@ Célszerű a képernyőket előre megrajzolni, mert könnyebb egy ilyen elemből
 [képernyő rajzoláshoz mockflow]
 Használjuk a [morkflow](https://mockflow.com) felületet, amelyben 3 képernyőt ingyenesen tervezhetünk.
 
+### Feladatok
+- Megnézni a Stack panel viselkedését, különböző esetekben.
+- Ikonok beillesztése a rendszerbe, hogy lehet véletlenszerűen váltogatni őket?
+- Hogyan lehet az egyes elemek tulajdonságát megváltoztatni?
+- Összefoglaló készítése 
+
 
