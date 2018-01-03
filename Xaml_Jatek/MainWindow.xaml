@@ -27,17 +27,17 @@
             <Label Content="Visszaszámolás: 00:42"
                    Padding="10"
                    Margin="10"
-                   HorizontalAlignment="Left"
+                   HorizontalAlignment="Left" FontWeight="Bold" FontSize="14"
                    />
             <Label Content="Ponttszám: 1234"
                    Padding="10"
                    Margin="10"
-                   HorizontalAlignment="Left"
+                   HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"
                    />
             <Label Content="oooo x1"
                    Padding="10"
                    Margin="10"
-                   HorizontalAlignment="Left"
+                   HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"
                    />
 
         </StackPanel>
@@ -47,14 +47,13 @@
                              Icon="SnowflakeOutline"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center" 
-                             Margin="20" />
+                             Margin="20" Foreground="#FFF7210B" />
         <fa:ImageAwesome Grid.Column="1"
                              Grid.Row="1"
-                           
                              Icon="ArrowCircleOutlineRight"                     
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
-                             Margin="20" />
+                             Margin="20" Foreground="#FF2730EC" />
         <!-- Lábléc -->
         <Button Grid.Row="2"
                 Grid.Column="0"
