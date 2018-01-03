@@ -12,7 +12,7 @@ A szellemi képességeinek növekedését kívánja nyomon követni. Mivel a rea
 
 ## Forgatókönyvek
 
-### Játék
+### Játék a felhasználó szemszögéből
 Ányos elindítja az alkalmazást (fontos döntés), majd ha felkészült elindítja a játékot, ha végzett a játék kiírja az eredményt.
 Mivel rövid időket mérünk, az alkalmazás elindításának mérésére nem használhatjuk a játékot. Nem tudjuk a program betöltési idejét. Ezért az alkalmazás indítása és a játék elkezdése között különbséget kell tenni.
 
@@ -34,5 +34,29 @@ Használjuk a [morkflow](https://mockflow.com) felületet, amelyben 3 képernyő
 - Ikonok beillesztése a rendszerbe, hogy lehet véletlenszerűen váltogatni őket?
 - Hogyan lehet az egyes elemek tulajdonságát megváltoztatni?
 - Összefoglaló készítése 
+
+### A játék menete részletesen (a programozó szemszögéből)
+
+Elindul a játék
+- A kezdő képernyőn nincs semmilyen felfordított kártya
+- Megmutatjuk az első kártyát
+  - ilyenkor még nem várunk visszajelzést
+- megmutatjuk a következő kártyát
+  - várunk a felhasználó visszajelzésére
+  - vagy lejár az idő
+  - Ha a felhasználó reagált akkor éertékeljük a visszajelzést
+  - Értékeljük a visszajelzést
+    - jó/nem jó 
+    - mennyi volt a reakcióidő
+  - Az értékelést megjelenítjük
+    - jó/nem jó
+    - pontszám rissítése (hogy számoljuk a pontokat?)
+- Ezt ismételjük amíg le nem jár az idő 
+  - a hátralévő időt folyamatosan kijelezzük (mennyi a játékidő)
+
+
+
+
+
 
 
