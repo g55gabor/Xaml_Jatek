@@ -40,17 +40,30 @@ Használjuk a [morkflow](https://mockflow.com) felületet, amelyben 3 képernyő
 Elindul a játék
 - A kezdő képernyőn nincs semmilyen felfordított kártya
 - Megmutatjuk az első kártyát
-  - ilyenkor még nem várunk visszajelzést
-- megmutatjuk a következő kártyát
+  
+    Fontos, hogy egymás után következhessen egyforma kártya. Ez csak akkor lehetséges, ha van egyforma kártya a pakliban. Vagy minden húzás után visszatesszük a kártyát és újra megkeverjük. Vagy a pakliban eleve több egyforma kártya van.
+    A programozáshoz válasszuk azt, hogy minden alkalommal megkverjük az egész paklit.
+    Már csak azt kell eldönteni, hogy mekkor legyen a kártyapakli. Minél nagyobb a kártyapakli, annál valószínűtleneb, hogy egymás után nem jön két egyforma. 
+    Értelmes kártyapakli méret - legyen pl. 6 kártya. (a játék élvezetét ez meg
+    
+    - Majd véletlenszerűen választunk a pakliból egy kártyát, (programozni ezt a legegyszerűbb)
+    - Ha keverünk és a tetejéről húzunk, az lényegében ugyanaz.
+
+- **ilyenkor még nem várunk visszajelzést**
+  
+- Megmutatjuk a következő kártyát
+
+   Ugyanúgy, mint az első kártyánál.  
+
   - várunk a felhasználó visszajelzésére
   - vagy lejár az idő
-  - Ha a felhasználó reagált akkor éertékeljük a visszajelzést
+  - Ha a felhasználó reagált akkor értékeljük a visszajelzést
   - Értékeljük a visszajelzést
     - jó/nem jó 
     - mennyi volt a reakcióidő
   - Az értékelést megjelenítjük
     - jó/nem jó
-    - pontszám rissítése (hogy számoljuk a pontokat?)
+    - pontszám frissítése (hogy számoljuk a pontokat?)
 - Ezt ismételjük amíg le nem jár az idő 
   - a hátralévő időt folyamatosan kijelezzük (mennyi a játékidő)
 

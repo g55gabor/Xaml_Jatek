@@ -44,16 +44,16 @@
         <!-- Kártyák -->
         <fa:ImageAwesome Grid.Column="0"
                              Grid.Row="1"
-                             Icon="SnowflakeOutline"
+                             Icon="None"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center" 
-                             Margin="20" Foreground="#FFF7210B" />
+                             Margin="20"  />
         <fa:ImageAwesome Grid.Column="1"
                              Grid.Row="1"
-                             Icon="ArrowCircleOutlineRight"                     
+                             Icon="None"                     
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
-                             Margin="20" Foreground="#FF2730EC" />
+                             Margin="20"  />
         <!-- Lábléc -->
         <Button Grid.Row="2"
                 Grid.Column="0"
