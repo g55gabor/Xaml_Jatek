@@ -29,16 +29,22 @@ namespace Xaml_Jatek
         {
             //System.Diagnostics.Debug.WriteLine("Megnyomtad a gombot");
             // Kell egy hatlapos kártyacsomag,
-            var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
-            var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
-            var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
-            var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
-            var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
-            var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+            var kartyak = new FontAwesome.WPF.FontAwesomeIcon[6];
+            kartyak[0]= FontAwesome.WPF.FontAwesomeIcon.Car;
+            kartyak[1] = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            kartyak[2] = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            kartyak[3] = FontAwesome.WPF.FontAwesomeIcon.Book;
+            kartyak[4] = FontAwesome.WPF.FontAwesomeIcon.Male;
+            kartyak[5] = FontAwesome.WPF.FontAwesomeIcon.Female;
 
             //dobunk dobókockával,
+            var dobokocka = new Random();
+            var dobas = dobokocka.Next(0, 5);
+            //System.Diagnostics.Debug.WriteLine(dobas);
+
+
             //ez kijelöli a kártyát, amelyiket meg kel jelenítenünk.
-            CardPlaceRight.Icon = card6;
+            CardPlaceRight.Icon = kartyak[dobas];
         }
     }
 }
