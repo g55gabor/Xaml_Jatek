@@ -56,6 +56,9 @@ Elindul a játék
    Ugyanúgy, mint az első kártyánál.  
 
   - várunk a felhasználó visszajelzésére
+    - első lépésben a gombokon keresztül
+    - második lépésben a billentyűzetről
+
   - vagy lejár az idő
   - Ha a felhasználó reagált akkor értékeljük a visszajelzést
   - Értékeljük a visszajelzést
