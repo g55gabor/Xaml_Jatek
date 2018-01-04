@@ -31,11 +31,17 @@ namespace Xaml_Jatek
 
         private void ShowNewCardButton_Click(object sender, RoutedEventArgs e)
         {
-
+            UjKartyaHuzasa();
+        }
+        /// <summary>
+        /// Egy kocka dobása és új kártya húzása a dobás alapján
+        /// </summary>
+        private void UjKartyaHuzasa()
+        {
             huzasokSzama++;
 
 
-           if (huzasokSzama==2)
+            if (huzasokSzama == 2)
             {
                 NoButton.IsEnabled = true;
                 YesButton.IsEnabled = true;
@@ -73,12 +79,14 @@ namespace Xaml_Jatek
             if (elozoKartya == CardPlaceRight.Icon)
             { // egyezik a két kártya tehát a válasz helytelen!
                 System.Diagnostics.Debug.WriteLine("A válasz hibás");
+                AValaszHibas();
             }
             else
             { //A válasz helyes
                 System.Diagnostics.Debug.WriteLine("A válasz helyes");
+                AValaszHelyes();
             }
-
+            UjKartyaHuzasa();
         }
 
         private void PartiallyButton_Click(object sender, RoutedEventArgs e)
@@ -91,11 +99,24 @@ namespace Xaml_Jatek
             if (elozoKartya==CardPlaceRight.Icon)
             {//valóban egyezik a két kártya
                 System.Diagnostics.Debug.WriteLine("A válasz helyes");
+                AValaszHelyes();
             }
             else
             {// nem egyezik
                 System.Diagnostics.Debug.WriteLine("A válasz hibás");
+                AValaszHibas();
             }
+            UjKartyaHuzasa();
+        }
+
+        private void AValaszHelyes()
+        {
+            CardSpaceLeft.Icon = FontAwesomeIcon.Check;
+        }
+
+        private void AValaszHibas()
+        {
+            CardSpaceLeft.Icon = FontAwesomeIcon.Times;
         }
     }
 }

@@ -42,7 +42,8 @@
 
         </StackPanel>
         <!-- Kártyák -->
-        <fa:ImageAwesome Grid.Column="0"
+        <fa:ImageAwesome x:Name="CardSpaceLeft"
+                             Grid.Column="0"
                              Grid.Row="1"
                              Icon="None"
                              VerticalAlignment="Center"
