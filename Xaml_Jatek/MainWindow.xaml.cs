@@ -25,11 +25,9 @@ namespace Xaml_Jatek
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ShowNewCard_Click(object sender, RoutedEventArgs e)
         {
-
+            System.Diagnostics.Debug.WriteLine("Megnyomtad a gombot");
         }
-
-
     }
 }
