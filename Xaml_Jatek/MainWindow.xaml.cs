@@ -20,14 +20,26 @@ namespace Xaml_Jatek
     /// </summary>
     public partial class MainWindow : Window
     {
+        int huzasokSzama=0;
+   
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void ShowNewCard_Click(object sender, RoutedEventArgs e)
+        private void ShowNewCardButton_Click(object sender, RoutedEventArgs e)
         {
-            //System.Diagnostics.Debug.WriteLine("Megnyomtad a gombot");
+
+            huzasokSzama++;
+
+           if (huzasokSzama==2)
+            {
+                NoButton.IsEnabled = true;
+                YesButton.IsEnabled = true;
+                ShowNewCardButton.IsEnabled = true;
+            }
+
+
             // Kell egy hatlapos kártyacsomag,
             var kartyak = new FontAwesome.WPF.FontAwesomeIcon[6];
             kartyak[0]= FontAwesome.WPF.FontAwesomeIcon.Car;
