@@ -27,7 +27,18 @@ namespace Xaml_Jatek
 
         private void ShowNewCard_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Megnyomtad a gombot");
+            //System.Diagnostics.Debug.WriteLine("Megnyomtad a gombot");
+            // Kell egy hatlapos kártyacsomag,
+            var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
+            var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
+            var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
+            var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+
+            //dobunk dobókockával,
+            //ez kijelöli a kártyát, amelyiket meg kel jelenítenünk.
+            CardPlaceRight.Icon = card6;
         }
     }
 }
