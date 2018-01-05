@@ -73,7 +73,12 @@ Elindul a játék
 - Ezt ismételjük amíg le nem jár az idő 
   - a hátralévő időt folyamatosan kijelezzük (mennyi a játékidő)
 
+## Javítások/ módosítások
 
+- legyen az ablaknak egy minimális mérete.
+- fogadjunk el a billentyűzetről is visszajelzést.
+- adjunk segítséget a képernyőn, hogy milyen billentyűvel lehet a játékot játszani.
+- visszajelző ábra méretét és a színét javítsuk.
 
 
 
