@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,7 +75,37 @@ namespace Xaml_Jatek
             CardPlaceRight.Icon = kartyak[dobas];
         }
 
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            Debug.WriteLine(e.Key);
+            if (e.Key == Key.Left)
+            {//balra nyíl
+                NoAnswer();
+            }
+            if (e.Key == Key.Right)
+            {//jobba nyíl
+                YesAnswer();
+            }
+            if (e.Key == Key.Down)
+            { }
+        }
+
         private void NoButton_Click(object sender, RoutedEventArgs e)
+        {
+            NoAnswer();
+        }
+
+        private void PartiallyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void YesButton_Click(object sender, RoutedEventArgs e)
+        {
+            YesAnswer();
+        }
+
+        private void NoAnswer()
         {
             if (elozoKartya == CardPlaceRight.Icon)
             { // egyezik a két kártya tehát a válasz helytelen!
@@ -89,14 +120,9 @@ namespace Xaml_Jatek
             UjKartyaHuzasa();
         }
 
-        private void PartiallyButton_Click(object sender, RoutedEventArgs e)
+        private void YesAnswer()
         {
-
-        }
-
-        private void YesButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (elozoKartya==CardPlaceRight.Icon)
+            if (elozoKartya == CardPlaceRight.Icon)
             {//valóban egyezik a két kártya
                 System.Diagnostics.Debug.WriteLine("A válasz helyes");
                 AValaszHelyes();
@@ -118,5 +144,7 @@ namespace Xaml_Jatek
         {
             CardSpaceLeft.Icon = FontAwesomeIcon.Times;
         }
+
+
     }
 }
