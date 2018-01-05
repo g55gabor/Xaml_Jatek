@@ -43,13 +43,27 @@
 
         </StackPanel>
         <!-- Kártyák -->
-        <fa:ImageAwesome x:Name="CardSpaceLeft"
-                             Grid.Column="0"
+        <Grid Grid.Column="0"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <fa:ImageAwesome x:Name="CardSpaceLeft"
+                             Grid.Column="1"
                              Grid.Row="1"
                              Icon="None"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center" 
-                             Margin="20"  />
+                             Margin="0"  />
+        </Grid>
+
         <fa:ImageAwesome x:Name="CardPlaceRight" 
                              Grid.Column="1"
                              Grid.Row="1"
@@ -65,34 +79,69 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>                
             </Grid.ColumnDefinitions>
-            
+
             <Button x:Name="NoButton"
                 Grid.Row="0"
                 Grid.Column="0"
-                Content="Nem"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
-                IsEnabled="False" Click="NoButton_Click" />
+                IsEnabled="False" Click="NoButton_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:FontAwesome Icon="ArrowLeft" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" 
+                                        Margin="5"/>
+                        <Label Content="Nem" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
 
             <Button x:Name="YesButton"
                 Grid.Row="0"
                 Grid.Column="2"
-                Content="Igen"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
-                IsEnabled="False" Click="YesButton_Click"  />
+                IsEnabled="False" Click="YesButton_Click"  >
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Igen"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                        <fa:FontAwesome Icon="ArrowRight"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Margin="5"/>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
 
             <Button x:Name="PartiallyButton"
                 Grid.Row="0"
                 Grid.Column="1"
-                Content="Részben"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
-                IsEnabled="False" Click="PartiallyButton_Click"     />
-           
+                IsEnabled="False" Click="PartiallyButton_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Részben"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"  />
+                        <fa:FontAwesome Icon="ArrowDown"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Margin="5"/>
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
             <Button x:Name="ShowNewCardButton"
                 Grid.Row="0"
                 Grid.Column="3"

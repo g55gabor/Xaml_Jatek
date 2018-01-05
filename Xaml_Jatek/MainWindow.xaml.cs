@@ -137,11 +137,13 @@ namespace Xaml_Jatek
 
         private void AValaszHelyes()
         {
+            CardSpaceLeft.Foreground = Brushes.Green;
             CardSpaceLeft.Icon = FontAwesomeIcon.Check;
         }
 
         private void AValaszHibas()
         {
+            CardSpaceLeft.Foreground = Brushes.Red;
             CardSpaceLeft.Icon = FontAwesomeIcon.Times;
         }
 
