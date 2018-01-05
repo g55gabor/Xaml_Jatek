@@ -81,6 +81,12 @@ Elindul a játék
 - visszajelző ábra méretét és a színét javítsuk.
 - a billentyűk csak akkor éljenek, ha már a játék elindult.
 
+- a kód tisztítása
+- a játék érzetének javítása (két egyforma kártya esetén ezt valahogy jelezni kellene)
+- visszaszámlálás
+- ponszámok számítása
+ 
+
 
 
 

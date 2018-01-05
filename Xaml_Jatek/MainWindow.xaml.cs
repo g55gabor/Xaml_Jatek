@@ -23,11 +23,24 @@ namespace Xaml_Jatek
     public partial class MainWindow : Window
     {
         int huzasokSzama=0;
-        FontAwesomeIcon elozoKartya = FontAwesomeIcon.None;
+         FontAwesomeIcon elozoKartya = FontAwesomeIcon.None;
+        //Dobókocka
+        Random dobokocka = new Random();
+        //6 lapos kártyacsomagot befogadó kártyahely (tömb) létrehozása - ide csak FontAwesomeIcon-ok helyezhetők.
+        FontAwesomeIcon[] kartyak = new FontAwesome.WPF.FontAwesomeIcon[6];
+
 
         public MainWindow()
-        {
+        { //Ez a függvény akkor fut le, amikor megjelenik az ablak.
             InitializeComponent();
+
+            //A kártyahely feltöltése kártyákkal
+            kartyak[0] = FontAwesome.WPF.FontAwesomeIcon.Car;
+            kartyak[1] = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            kartyak[2] = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            kartyak[3] = FontAwesome.WPF.FontAwesomeIcon.Book;
+            kartyak[4] = FontAwesome.WPF.FontAwesomeIcon.Male;
+            kartyak[5] = FontAwesome.WPF.FontAwesomeIcon.Female;
         }
 
         private void ShowNewCardButton_Click(object sender, RoutedEventArgs e)
@@ -55,20 +68,14 @@ namespace Xaml_Jatek
             }
 
 
-            // Kell egy hatlapos kártyacsomag,
-            var kartyak = new FontAwesome.WPF.FontAwesomeIcon[6];
-            kartyak[0] = FontAwesome.WPF.FontAwesomeIcon.Car;
-            kartyak[1] = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
-            kartyak[2] = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
-            kartyak[3] = FontAwesome.WPF.FontAwesomeIcon.Book;
-            kartyak[4] = FontAwesome.WPF.FontAwesomeIcon.Male;
-            kartyak[5] = FontAwesome.WPF.FontAwesomeIcon.Female;
+
 
             //dobunk dobókockával,
-            var dobokocka = new Random();
+           
             var dobas = dobokocka.Next(0, 5);
             //System.Diagnostics.Debug.WriteLine(dobas);
 
+            //Elmentjük az aktuális kártyát, ami a húzás után az előző kártya lesz.
             elozoKartya = CardPlaceRight.Icon;
 
             //ez kijelöli a kártyát, amelyiket meg kel jelenítenünk.
