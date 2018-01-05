@@ -69,8 +69,6 @@ namespace Xaml_Jatek
             }
 
 
-
-
             //dobunk dobókockával,
            
             var dobas = dobokocka.Next(0, 5);
@@ -79,8 +77,16 @@ namespace Xaml_Jatek
             //Elmentjük az aktuális kártyát, ami a húzás után az előző kártya lesz.
             elozoKartya = CardPlaceRight.Icon;
 
+            //eltüntetjük az előző kártyát
+            var animationOut = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(100));
+            CardPlaceRight.BeginAnimation(OpacityProperty, animationOut);
+
             //ez kijelöli a kártyát, amelyiket meg kel jelenítenünk.
             CardPlaceRight.Icon = kartyak[dobas];
+
+            //megjelenítjük az új kártyát
+            var animationIn = new DoubleAnimation(0, 1, TimeSpan.FromMilliseconds(100));
+            CardPlaceRight.BeginAnimation(OpacityProperty, animationIn);
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -167,6 +173,7 @@ namespace Xaml_Jatek
 
         private void AValaszLAssuEltunese()
         {
+            //todo: megpróbálni kiszervezni a program elejére
             var animation = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(1000));
             CardSpaceLeft.BeginAnimation(OpacityProperty, animation);
         }
