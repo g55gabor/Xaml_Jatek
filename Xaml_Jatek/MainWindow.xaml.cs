@@ -67,7 +67,9 @@ namespace Xaml_Jatek
             //ey másodperccel csökkentem az időt
             visszalevoIdo = visszalevoIdo.Add(TimeSpan.FromSeconds(-1));
             //szöveg belsejáben csere
-            ContdownLabel.Content = $"Visszaszámlálás: {visszalevoIdo}";
+            //ContdownLabel.Content = $"Visszaszámlálás: {visszalevoIdo}";
+            //ContdownLabel.Content = $"Visszaszámlálás: {visszalevoIdo.Minutes:00}:{visszalevoIdo.Seconds:00}";
+            ContdownLabel.Content = $"Visszaszámlálás: {visszalevoIdo.ToString(@"mm\:ss")}";
             if (visszalevoIdo==TimeSpan.Zero)
             {
                 JatekVege();
