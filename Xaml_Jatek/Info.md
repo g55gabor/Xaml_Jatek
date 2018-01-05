@@ -79,6 +79,7 @@ Elindul a játék
 - fogadjunk el a billentyűzetről is visszajelzést.
 - adjunk segítséget a képernyőn, hogy milyen billentyűvel lehet a játékot játszani.
 - visszajelző ábra méretét és a színét javítsuk.
+- a billentyűk csak akkor éljenek, ha már a játék elindult.
 
 
 

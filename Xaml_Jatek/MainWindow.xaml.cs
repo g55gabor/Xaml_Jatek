@@ -77,7 +77,12 @@ namespace Xaml_Jatek
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            Debug.WriteLine(e.Key);
+           // Debug.WriteLine(e.Key);
+            if (huzasokSzama<2)
+            { //még nincs két kártya, tehát a gombok nem élnek.
+                return; //ebben az esetben a függvényvégrehajtása felfüggesztődik, visszatér a hívóhoz.
+            }
+
             if (e.Key == Key.Left)
             {//balra nyíl
                 NoAnswer();
