@@ -25,7 +25,8 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     >
-            <Label Content="Visszaszámolás: 00:42"
+            <Label x:Name="ContdownLabel"
+                   Content="Visszaszámlálás: 00:00:55"
                    Padding="10"
                    Margin="10"
                    HorizontalAlignment="Left" FontWeight="Bold" FontSize="14"

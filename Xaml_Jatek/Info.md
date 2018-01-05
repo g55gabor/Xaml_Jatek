@@ -86,6 +86,27 @@ Elindul a játék
 - visszaszámlálás
 - ponszámok számítása
  
+### Desktop felület programozása
+- többszálú programozás
+
+
+                          +---------------+
+                          |               |
+                          |  Robot 2      |
+                          |               |
+                          +-------+-------+
+         +------------+           |          +----------------+
+         |            |           |          |                |
+         | Robot 1    +---+       |       +--+  Robot 3       |
+         |            |   |       |       |  |                |
+         +------------+   |       |       |  +----------------+
+                          +----------------+
+                          |                |
+                          |  Áramforrás    |
+                          |                |
+                          +----------------+
+Egyszerre minig csak az egyik robot kap áramot (többszálú programozás háttere)
+De nagyon gyorsan váltogatunk a robotok között, olyan a hatása, mintha folytonosan mozognának.
 
 
 
