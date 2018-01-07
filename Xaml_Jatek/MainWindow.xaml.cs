@@ -230,7 +230,6 @@ namespace Xaml_Jatek
         {
             stopper.Stop();
             utolsoReakcioIdo = stopper.ElapsedMilliseconds;
-            ReakcioLabel.Content = $"Reakció: {utolsoReakcioIdo}";
 
             //az utolsó reakcióidőt elmentjük a listára
             ossesReakcio.Add(utolsoReakcioIdo);
@@ -244,6 +243,7 @@ namespace Xaml_Jatek
             }
             var reakciokAtlaga = reakciokOsszege / ossesReakcio.Count;
             ReakcioLabel.Content = $"Reakció: {utolsoReakcioIdo}/{reakciokAtlaga}";
+
 
         }
 
