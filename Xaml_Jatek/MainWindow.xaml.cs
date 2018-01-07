@@ -34,6 +34,13 @@ namespace Xaml_Jatek
         TimeSpan visszalevoIdo;
         DispatcherTimer ingaora;
 
+        //stopperóra a reakció idő méréséhez
+        Stopwatch stopper = new Stopwatch();
+        private long utolsoReakcioIdo;
+
+        //Az összes reakciót eltároljuk, hogy az átlagot tudjuk számítani
+        List<long> ossesReakcio = new List<long>(); 
+
         public MainWindow()
         { //Ez a függvény akkor fut le, amikor megjelenik az ablak.
             InitializeComponent();
@@ -136,6 +143,9 @@ namespace Xaml_Jatek
             //ez kijelöli a kártyát, amelyiket meg kel jelenítenünk.
             CardPlaceRight.Icon = kartyak[dobas];
 
+            //nem foglalkozunk esetszétválasztással, mindíg újraindítjuk
+            stopper.Restart();
+
             //megjelenítjük az új kártyát
             var animationIn = new DoubleAnimation(0, 1, TimeSpan.FromMilliseconds(100));
             CardPlaceRight.BeginAnimation(OpacityProperty, animationIn);
@@ -180,6 +190,7 @@ namespace Xaml_Jatek
 
         private void NoAnswer()
         {
+            ReakcióidoEsPontszamitas();
             if (elozoKartya == CardPlaceRight.Icon)
             { // egyezik a két kártya tehát a válasz helytelen!
                 System.Diagnostics.Debug.WriteLine("A válasz hibás");
@@ -195,6 +206,7 @@ namespace Xaml_Jatek
 
         private void YesAnswer()
         {
+            ReakcióidoEsPontszamitas();
             if (elozoKartya == CardPlaceRight.Icon)
             {//valóban egyezik a két kártya
                 System.Diagnostics.Debug.WriteLine("A válasz helyes");
@@ -206,6 +218,33 @@ namespace Xaml_Jatek
                 AValaszHibas();
             }
             UjKartyaHuzasa();
+        }
+
+        /// <summary>
+        /// reakcióidő mérése
+        /// átlagos reakcióidő mérése
+        /// pont számítás
+        /// események megjelenítése
+        /// </summary>
+        private void ReakcióidoEsPontszamitas()
+        {
+            stopper.Stop();
+            utolsoReakcioIdo = stopper.ElapsedMilliseconds;
+            ReakcioLabel.Content = $"Reakció: {utolsoReakcioIdo}";
+
+            //az utolsó reakcióidőt elmentjük a listára
+            ossesReakcio.Add(utolsoReakcioIdo);
+
+            //átlagos reakcióidő =?
+           long reakciokOsszege = 0;
+
+           for (int i = 0; i < ossesReakcio.Count; i++)
+            {
+                reakciokOsszege += ossesReakcio[i];
+            }
+            var reakciokAtlaga = reakciokOsszege / ossesReakcio.Count;
+            ReakcioLabel.Content = $"Reakció: {utolsoReakcioIdo}/{reakciokAtlaga}";
+
         }
 
         private void AValaszHelyes()
