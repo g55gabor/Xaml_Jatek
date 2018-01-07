@@ -72,6 +72,17 @@ Elindul a játék
     - pontszám frissítése (hogy számoljuk a pontokat?)
 - Ezt ismételjük amíg le nem jár az idő 
   - a hátralévő időt folyamatosan kijelezzük (mennyi a játékidő)
+  - 
+### Pontszámítás reakcióidő mérése
+- A reakcióidő, azt az új kártya megjelenítésétől számolva kell érteni, milliszekundumban mérve.
+- Mivel a játékban sok kárta felismerés lesz, ezért a reakcióidők átlagát fogjuk számolni.
+- Helyes válasz esetén hozzáadunk a ponthoz, helytelen válasz alapján levonunk a pontszámból.
+- A pontszám kapcsolódjon a reakcióidőhöz:ha jó a válasz, minél gyorsabb volt annál jobb, ha rossz a válasz, akkor a levonandó pont legyen nagyobb minél többet vártunk.
+- A játék tartsa nyilván a top 5 játékot,
+- A játék végén frissítse a top5 listát.
+- Frissítéskor a top 5 listát mentsük el.
+- Az alkalmazás indításakor töltse be a top 5 listánkat.
+
 
 ## Javítások/ módosítások
 
